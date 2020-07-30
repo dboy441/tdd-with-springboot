@@ -32,4 +32,13 @@
 
 #### 任务拆分
 - Given 合法的注册信息 When 注册 Then 注册成功
-- Given 
+- Given 必填字段为空注册　When 注册 Then ＊＊字段不能为空　注册不成功
+- Given 字段长度不正确注册　When 注册 Then ＊＊字段不合法
+- Given 法人类型错误　When 注册 Then 法人类型不正确
+- Given 证件类型不正确　When 注册 Then 证件类型不正确
+- Given 统一信用代码已存在法人注册　When 注册 Then 统一信用代码已存在
+- Given 统一社会信用代码与企业名称不匹配　When 注册 Then 法人信息核验失败
+- Given 证件类型为身份证，长度不正确　When 注册 Then 证件号码不合法
+- Given 证件类型为护照，长度不正确　When 注册 Then 证件号码不合法
+- Given 同步国家平台失败　When 注册 Then 注册失败，同步国家失败。
+
